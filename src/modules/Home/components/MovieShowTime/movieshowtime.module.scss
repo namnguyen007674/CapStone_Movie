@@ -1,0 +1,18 @@
+.bg_movieShowtime {
+  position: relative;
+  padding-top: 30px;
+  &::before{
+    content: '';
+    background: url('https://www.bhdstar.vn/wp-content/themes/bhd/assets/images/movie-details-bg.jpg');
+    position: absolute;
+    top: -10px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+

@@ -1,0 +1,59 @@
+.card_movie {
+  .card_item {
+    text-decoration: none;
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transform: scale(1);
+      transition: all 0.5s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .card_name {
+      padding: 15px 0;
+      height: 75px;
+      display: block;
+      font-size: 15px;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 22px;
+      transition: all .5s;
+      &:hover{
+        color: #c3cc26;
+      }
+    }
+  }
+  .card_ticket {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 55px;
+    .btn_card {
+      width: 100%;
+      padding: 15px 0;
+      color: white;
+      text-decoration: none;
+      background-color: #54ab35;
+      border-radius: 3px;
+      font-weight: 600;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &:hover {
+        color: #54ab35;
+        background-color: white;
+      }
+      span{
+        margin-left: 5px;
+        font-size: 15px;
+      }
+    }
+  }
+}

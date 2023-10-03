@@ -1,0 +1,11 @@
+.tab_titleMovie{
+  color: white !important;
+  transition: all .5s;
+  font-size: 18px !important;
+  &.active {
+    color: #d4dd29 !important;
+  }
+  &:hover{
+    color: #d4dd29 !important;
+  }
+}
