@@ -5,8 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { useQuery } from "@tanstack/react-query";
 import { getBanner } from "../../../../apis/movies";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import style from './Banner.module.scss'
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import style from "./Banner.module.scss";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -43,7 +43,10 @@ function SamplePrevArrow(props) {
 }
 
 export default function Banner() {
-  const { data:banners = [] } = useQuery({ queryKey: ["banner"], queryFn: getBanner });
+  const { data: banners = [] } = useQuery({
+    queryKey: ["banner"],
+    queryFn: getBanner,
+  });
   const settings = {
     infinite: true,
     speed: 500,
@@ -51,12 +54,19 @@ export default function Banner() {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    autoplay:true
+    autoplay: true,
   };
   return (
     <Slider {...settings}>
-      {banners.map((banner,index) => {
-        return <img key={index} className={style.bannerImg} src={banner.hinhAnh} alt="" />;
+      {banners.map((banner, index) => {
+        return (
+          <img
+            key={index}
+            className={style.bannerImg}
+            src={banner.hinhAnh}
+            alt=""
+          />
+        );
       })}
     </Slider>
   );
