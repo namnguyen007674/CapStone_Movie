@@ -1,5 +1,5 @@
-import { Container, Grid } from "@mui/material";
 import React from "react";
+import { Container, Grid } from "@mui/material";
 import style from "./Footer.module.scss";
 export default function Footer() {
   return (
