@@ -6,7 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getBanner } from "../../../../apis/movies";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import style from "./Banner.module.scss";
+import style from './Banner.module.scss'
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
