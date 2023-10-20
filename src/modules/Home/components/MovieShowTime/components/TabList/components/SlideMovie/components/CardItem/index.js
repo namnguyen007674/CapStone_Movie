@@ -1,1 +1,1 @@
-export {default} from "./Carditem"
+export {default} from "./CardItem"

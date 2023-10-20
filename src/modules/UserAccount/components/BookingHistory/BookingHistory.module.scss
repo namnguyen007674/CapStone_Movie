@@ -1,0 +1,20 @@
+.booking {
+  .bookingTitle {
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 5px;
+    @media (max-width: 767.98px) { font-size: 15px; }
+  }
+  .bookingName {
+    font-size: 18px;
+    color: #fb4226;
+    font-weight: 600;
+    @media (max-width: 767.98px) { font-size: 16px; }
+  }
+  .bookingCinema {
+    font-size: 18px;
+    font-weight: 600;
+    color: #54ab35;
+    @media (max-width: 767.98px) { font-size: 16px; }
+  }
+}

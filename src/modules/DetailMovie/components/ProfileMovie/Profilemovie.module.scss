@@ -1,0 +1,123 @@
+.profile {
+  .title {
+    display: flex;
+    padding: 25px 0;
+    h3 {
+      margin-right: 10px;
+      margin-bottom: 30px;
+      font-size: 26px;
+      color: #fbfbf9;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    .homeActive {
+      transition: all 0.5s;
+      cursor: pointer;
+      &:hover {
+        color: #d4dd29;
+      }
+    }
+  }
+  // Ảnh và tiêu đề chi tiết phim
+  .profileContent {
+    @media (max-width: 991.98px) { 
+      width: 80%;
+      margin:  0 auto;
+     }
+
+    .profileImg {
+      position: relative;
+      img {
+        width: 100%;
+      }
+      .profileOverlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: all .5s;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      .btnPlay {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+  // Mô tả chi tiết phim
+    .profileItem {
+      .profileName {
+        margin-bottom: 15px;
+        h3 {
+          font-size: 28px;
+          font-weight: 400;
+          text-transform: uppercase;
+          color: #fbfbf9;
+          @media (max-width: 991.98px) { 
+            font-size: 25px;
+          }
+        }
+      }
+      .profileDesc {
+        font-size: 15px;
+        color: #a6b2c9;
+        line-height: 26px;
+      }
+
+      .movieInfo {
+        margin-top: 45px;
+        ul {
+          list-style: none;
+          li {
+            margin-bottom: 20px;
+            color: #e8eff5;
+            .rate {
+              padding-left: 20px;
+              font-weight: 500;
+            }
+            .dateShow {
+              padding-left: 20px;
+              color: #d4dd29;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+
+      .btnDetail {
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+        .btnItem {
+          min-width: 139px;
+          padding: 15px 0;
+          color: white;
+          font-weight: 600;
+          background-color: #54ab35;
+          border-radius: 3px;
+          border: none;
+          cursor: pointer;
+          font-size: 16px;
+          &:hover {
+            color: #54ab35;
+            background-color: white;
+          }
+        }
+        .btnTrailer {
+          margin-right: 20px;
+          padding: 13.5px;
+          font-size: 17px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

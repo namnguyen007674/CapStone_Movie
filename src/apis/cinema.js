@@ -5,7 +5,7 @@ export async function getCinemaSystems() {
     const response = await fetcher("/QuanLyRap/LayThongTinHeThongRap") 
     return response.data.content
   } catch (error) {
-    return error.response.data.content
+    throw error.response.data.content
   }
 }
 
@@ -18,7 +18,7 @@ export async function getCinemaInSystem(cinemaId) {
     }) 
     return response.data.content
   } catch (error) {
-    return error.response.data.content
+    throw error.response.data.content
   }
 }
 
@@ -33,6 +33,6 @@ export async function getMovieInCinema(cinemaId) {
     }) 
     return response.data.content
   } catch (error) {
-    return error.response.data.content
+    throw error.response.data.content
   }
 }

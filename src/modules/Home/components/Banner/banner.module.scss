@@ -1,9 +1,10 @@
-.banner_img {
+
+.bannerImg {
   width: 100%;
-  height: 650px;
+  height: 100vh;
   object-fit: cover;
-  // transform: translate(-50%, 0);
-  // left: 50%;
-  min-width: 1075px;
   position: relative;
+  @media (max-width:600px) {
+    display: none;
+  }
 }

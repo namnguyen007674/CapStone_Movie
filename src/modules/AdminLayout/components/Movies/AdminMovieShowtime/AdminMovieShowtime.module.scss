@@ -1,0 +1,23 @@
+.AdminMovieShowtime {
+  padding: 80px 50px;
+  .showTimeImg {
+    max-width: 300px;
+    img {
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+  }
+  .showTimeDetail {
+    .ticketPrice {
+      margin: 30px 0;
+    }
+    .btnShowTime{
+     margin-bottom: 25px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.AdminSideBar{
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  .directionSideBar{
+    text-decoration: none;
+    color: black;
+    &:hover{
+      text-decoration: underline;
+      color: #4682b4;
+    }
+  }
+}

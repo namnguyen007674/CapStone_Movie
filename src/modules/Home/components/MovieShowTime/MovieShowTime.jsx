@@ -2,17 +2,21 @@ import React from "react";
 import TabList from "./components/TabList";
 import { useQuery } from "@tanstack/react-query";
 import { getMoives } from "../../../../apis/movies";
-import style from './movieshowtime.module.scss'
+import style from './MovieShowTime.module.scss'
+import Loading from "../../../../components/Loading/Loading";
 
 
 
 export default function MovieShowTime() {
-  const {data = [],isLoading,error} = useQuery({
+  const {data:movieList = [],isLoading} = useQuery({
     queryKey:["movie"],queryFn:getMoives
   })
+  if(isLoading) {
+    return <Loading/>
+  }
   return (
-    <div id="Xem Phim" className={style.bg_movieShowtime}>
-      <TabList data={data}/>
-    </div>
+    <section id="Xem Phim" className={style.bgMovieShowtime}>
+      <TabList movieList={movieList}/>
+    </section>
   )
 }

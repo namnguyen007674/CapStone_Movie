@@ -1,8 +1,8 @@
 import React from "react";
-import MenuNav from "./MenuNav";
+import HideAppBar from "./HideNav/HideNav";
 
 export default function Header() {
-  return(
-    <MenuNav/>
-    ) 
+  return (
+    <HideAppBar />
+  );
 }

@@ -1,20 +1,18 @@
 import React from "react";
 import Banner from "./components/Banner";
 import MovieList from "./components/MovieShowTime";
-import Cinemas from "./components/Cinemas/Cinemas";
-import { Container } from "@mui/material";
-import style from "./home.module.scss"
+import CinemaSystem from "./components/CinemaSystem";
+import Member from "./components/Member";
+import Promotion from "./components/Promotion/Promotion";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <Banner />
       <MovieList />
-      <div className={style.bg_cinemaSystem}>
-        <Container>
-          <Cinemas/>
-        </Container>
-      </div>
-    </>
+      <CinemaSystem />
+      <Member />
+      <Promotion />
+    </main>
   );
 }

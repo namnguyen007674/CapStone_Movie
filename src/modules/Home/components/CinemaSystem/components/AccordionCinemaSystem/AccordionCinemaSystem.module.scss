@@ -1,0 +1,10 @@
+.AccordionCinemaSystem {
+  background-color: #121212;
+  @media (min-width: 576px) {
+    display: block;
+  }
+
+  @media (min-width: 910px) {
+    display: none;
+  }
+}

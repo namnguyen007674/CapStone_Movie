@@ -5,7 +5,7 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import SlideMovie from "./components/SlideMovie";
 import Container from "@mui/material/Container";
-import style from "./tablist.module.scss";
+import style from "./Tablist.module.scss";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -20,7 +20,7 @@ function CustomTabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          {children}
+          <div className="fsdfsdfd">{children}</div>
         </Box>
       )}
     </div>
@@ -40,13 +40,13 @@ function a11yProps(index) {
   };
 }
 
-export default function TabList({ data }) {
+export default function TabList({ movieList }) {
   // Lọc danh sách phim sắp chiếu
-  const upComingMovie = data.filter((item)=>{
+  const upComingMovie = movieList.filter((item)=>{
     return item.sapChieu === true
   })
   // Lọc danh sách phim đang chiếu
-  const isShowingMovie = data.filter((item)=>{
+  const isShowingMovie = movieList.filter((item)=>{
     return item.dangChieu === true
   })
 
@@ -64,7 +64,7 @@ export default function TabList({ data }) {
 
   
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: "100%"}}>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           value={value}
@@ -72,24 +72,24 @@ export default function TabList({ data }) {
           aria-label="basic tabs example"
           centered
         >
-          <Tab label="TẤT CẢ" {...a11yProps(0)} onClick={()=>handleItemChangeActive('item1')} className={`${style.tab_titleMovie} ${activeItem === 'item1' ? `${style.active}` : "" }` } />
-          <Tab label="PHIM ĐANG CHIẾU" {...a11yProps(1)} onClick={()=>handleItemChangeActive('item2')} className={`${style.tab_titleMovie} ${activeItem === 'item2' ? `${style.active}` : "" }` } />
-          <Tab label="PHIM SẮP CHIẾU" {...a11yProps(2)} onClick={()=>handleItemChangeActive('item3')} className={`${style.tab_titleMovie} ${activeItem === 'item3' ? `${style.active}` : "" }` } />
+          <Tab label="TẤT CẢ" {...a11yProps(0)} onClick={()=>handleItemChangeActive('item1')} className={`${style.tabTitleMovie} ${activeItem === 'item1' ? `${style.active}` : "" }` } />
+          <Tab label="PHIM ĐANG CHIẾU" {...a11yProps(1)} onClick={()=>handleItemChangeActive('item2')} className={`${style.tabTitleMovie} ${activeItem === 'item2' ? `${style.active}` : "" }` } />
+          <Tab label="PHIM SẮP CHIẾU" {...a11yProps(2)} onClick={()=>handleItemChangeActive('item3')} className={`${style.tabTitleMovie} ${activeItem === 'item3' ? `${style.active}` : "" }` } />
         </Tabs>
       </Box>
-      <CustomTabPanel value={value} index={0} >
-        <Container>
-          <SlideMovie data={data}  />
+      <CustomTabPanel sx={{width:{'xs' :'105%'}}} value={value} index={0} >
+        <Container  >
+          <SlideMovie movieList={movieList}  />
         </Container>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-      <Container>
-          <SlideMovie data={isShowingMovie}  />
+      <Container >
+          <SlideMovie movieList={isShowingMovie}  />
         </Container>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
         <Container>
-          <SlideMovie data={upComingMovie}  />
+          <SlideMovie movieList={upComingMovie}  />
         </Container>
       </CustomTabPanel>
     </Box>

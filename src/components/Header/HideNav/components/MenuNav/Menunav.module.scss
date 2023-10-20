@@ -1,0 +1,158 @@
+.headerNav {
+  background: #111111
+    url("https://www.bhdstar.vn/wp-content/themes/bhd/assets/images/bg-header.jpg")
+    0 0 repeat-x;
+  position: relative;
+  z-index: 999;
+
+  @media (max-width: 767.98px) {
+    height: 64px;
+  }
+  @media (max-width: 600px) {
+    height: 52px;
+  }
+  .headerLogo {
+    display: flex;
+    align-items: center;
+    img {
+      width: 57px;
+      @media (max-width: 991.98px) {
+        width: 45px;
+      }
+      @media (max-width: 899.98px) {
+        display: none;
+      }
+    }
+    .logoBtn {
+      color: white;
+      background-color: #54ab35;
+      border-radius: 5px;
+      border: none;
+      font-weight: 600;
+      font-size: 15px;
+      margin-left: 25px;
+      padding: 7px 20px;
+      cursor: pointer;
+      @media (max-width: 991.98px) {
+        font-size: 12px;
+        margin-right: 0px;
+        margin-left: 10px;
+      }
+      @media (max-width: 899.98px) {
+        font-size: 10px;
+      }
+
+      @media (max-width: 575.98px) {
+        font-size: 9px;
+      }
+      &:hover {
+        color: #54ab35;
+        background-color: white;
+      }
+    }
+  }
+  .titleHeader {
+    transition: all 0.5s;
+    @media (max-width: 1199.98px) {
+      font-size: 12px;
+      margin-left: 3px;
+    }
+    &:hover {
+      color: #54ab35;
+    }
+  }
+  .account {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    .socialList {
+      max-height: 35px;
+
+      @media (max-width: 991.98px) {
+        max-height: 30px;
+      }
+      .socialItem {
+        margin-right: 10px;
+        img {
+          width: 35px;
+          @media (max-width: 991.98px) {
+            width: 31px;
+          }
+          @media (max-width: 899.98px) {
+            width: 30px;
+          }
+        }
+      }
+    }
+    .avatarAccount {
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      display: block;
+      margin-left: 10px;
+      @media (max-width: 1199.98px) {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+      }
+      @media (max-width: 991.98px) {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+    .textAccount {
+      color: white;
+      text-decoration: none;
+      padding: 7px 13px;
+      background-color: #54ab35;
+      border-radius: 5px;
+      font-weight: 600;
+      font-size: 14px;
+      margin-left: 8px;
+      @media (max-width: 991.98px) {
+        font-size: 12px;
+      }
+      @media (max-width: 899.98px) {
+        font-size: 10px;
+      }
+      @media (max-width: 575.98px) {
+        font-size: 9px;
+      }
+      &:hover {
+        color: #54ab35;
+        background-color: white;
+      }
+    }
+  }
+  .lineHeader {
+    position: absolute;
+    top: 69px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 909;
+    width: 100%;
+    @media (max-width: 1199.98px) {
+      top: 64px;
+    }
+    @media (max-width: 991.98px) {
+      top: 64px;
+    }
+    @media (max-width: 600px) {
+      top: 52px;
+    }
+  }
+  .logoCenter {
+    @media (max-width: 899.98px) {
+      position: absolute;
+      left: 47%;
+      height: 50px;
+      top: 22px;
+      z-index: 999;
+      margin-right: 0;
+      @media (max-width: 767.98px) {
+        display: none;
+      }
+    }
+  }
+}

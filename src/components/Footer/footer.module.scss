@@ -2,8 +2,9 @@ footer {
   padding-top: 60px;
   position: relative;
   padding-top: 60px;
-  background: url("https://www.bhdstar.vn/wp-content/themes/bhd/assets/images/bg-grid.jpg") top center repeat;
-  .footer_logo{
+  background: url("https://www.bhdstar.vn/wp-content/themes/bhd/assets/images/bg-grid.jpg")
+    top center repeat;
+  .footerLogo {
     position: absolute;
     top: -60px;
     left: 50%;
@@ -13,32 +14,49 @@ footer {
     text-align: center;
     padding-top: 26px;
     text-align: center;
-    background: url("https://www.bhdstar.vn/wp-content/themes/bhd/assets/images/footer-cured.png") 0px 0px no-repeat;
-    img{
+    background: url("https://www.bhdstar.vn/wp-content/themes/bhd/assets/images/footer-cured.png")
+      0px 0px no-repeat;
+    img {
       max-width: 100%;
       height: auto;
     }
   }
-  .footer_title {
-    padding-bottom: 8px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    font-size: 16px;
-    line-height: 28px;
-    font-weight: 400;
-    color: white;
-  }
-  .footer_item {
-    list-style: none;
-    margin-bottom: 11px;
-    a {
-      color: #c3cc26;
-      font-size: 14px;
-      line-height: 22px;
-      font-weight: 300;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline #c3cc26;
+  .footerContent {
+    position: relative;
+    @media (max-width: 900px) {
+      // display: flex;
+      flex-direction: column;
+    }
+    .footerTitle {
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 28px;
+      font-weight: 400;
+      color: white;
+    }
+    .footerItem {
+      list-style: none;
+      margin-bottom: 11px;
+      a {
+        color: #c3cc26;
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 300;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline #c3cc26;
+        }
+      }
+    }
+    .footerSymbol {
+      position: absolute;
+      bottom: 30px;
+      left: 0px;
+      @media (max-width: 900px) {
+        left: 106px;
+        top: 87px;
       }
     }
   }
