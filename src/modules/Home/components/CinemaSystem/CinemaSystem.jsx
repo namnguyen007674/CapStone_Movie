@@ -8,8 +8,8 @@ import { getCinemaSystems } from "../../../../apis/cinema";
 import CinemaList from "./components/CinemaList";
 import MovieList from "./components/MovieList/MovieList";
 import Loading from "../../../../components/Loading/Loading";
-import style from "./CinemaSystem.module.scss";
 import AccordionCinemaSystem from "./components/AccordionCinemaSystem/AccordionCinemaSystem";
+import style from "./CinemaSystem.module.scss";
 
 export default function CinemaSystem() {
   // State mã cụm rạp chiếu

@@ -2,8 +2,8 @@ import React from "react";
 import TabList from "./components/TabList";
 import { useQuery } from "@tanstack/react-query";
 import { getMoives } from "../../../../apis/movies";
-import style from './MovieShowTime.module.scss'
 import Loading from "../../../../components/Loading/Loading";
+import style from './MovieShowTime.module.scss'
 
 
 

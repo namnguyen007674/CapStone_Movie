@@ -3,9 +3,9 @@ import React from "react";
 import { useUserContext } from "../../../contexts/UserContext/UserContext";
 import { useQuery } from "@tanstack/react-query";
 import { bookingHistory } from "../../../../apis/user";
-import style from "./BookingHistory.module.scss";
 import dayjs from "dayjs";
 import Loading from "../../../../components/Loading/Loading";
+import style from "./BookingHistory.module.scss";
 
 export default function BookingHistory() {
   const { currentUser } = useUserContext();

@@ -3,8 +3,8 @@ import { getMovieInCinema } from "../../../../../../../../apis/cinema";
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import ButtonTime from "../../../../../../../../components/ButtonTime";
-import style from "./AccordionMovieList.module.scss"
 import Loading from "../../../../../../../../components/Loading";
+import style from "./AccordionMovieList.module.scss"
 
 export default function MovieList({ cinemaComplexId, cinemaId }) {
   const { data:movieList = [],isLoading } = useQuery({

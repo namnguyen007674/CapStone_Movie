@@ -1,8 +1,8 @@
 import { Grid } from "@mui/material";
 import React from "react";
-import style from "./LocationCinemaDetail.module.scss";
 import ButtonTime from "../../../../../../components/ButtonTime";
 import { Link } from "react-router-dom";
+import style from "./LocationCinemaDetail.module.scss";
 
 
 export default function CinemaListOfDetail({ listOfCinemaDetail }) {

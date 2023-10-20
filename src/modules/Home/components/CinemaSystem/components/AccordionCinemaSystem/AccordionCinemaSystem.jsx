@@ -9,7 +9,6 @@ import { useQuery } from "@tanstack/react-query";
 import { getCinemaInSystem } from "../../../../../../apis/cinema";
 import AccordionMovieList from "./components/AccordionMovieList";
 import style from "./AccordionCinemaSystem.module.scss";
-import Loading from "../../../../../../components/Loading";
 const Accordion = styled((props) => (
   <MuiAccordion
     disableGutters

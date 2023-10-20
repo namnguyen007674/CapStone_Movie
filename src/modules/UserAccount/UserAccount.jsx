@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import style from "./UserAccount.module.scss";
 import { Outlet, useLocation, Link } from "react-router-dom";
 import { Container } from "@mui/material";
+import style from "./UserAccount.module.scss";
 // Validation input
 
 export default function UserAccount() {

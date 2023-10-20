@@ -4,9 +4,9 @@ import DetailCinemaComplex from "./components/DetailCinemaComplex";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { getMovieDetail } from "../../apis/movies";
-import style from "./Detailmovie.module.scss";
 import { Container } from "@mui/material";
 import Loading from "../../components/Loading/Loading";
+import style from "./Detailmovie.module.scss";
 
 export default function DetailMovie() {
   const { movieId } = useParams();

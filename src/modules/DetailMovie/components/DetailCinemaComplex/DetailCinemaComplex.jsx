@@ -1,8 +1,8 @@
 import {  Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import style from "./DetailCinemaComplex.module.scss";
 import LocationCinemaDetail from "./components/LocationCinemaDetail";
 import AccordionDetailMovie from "./components/AccordionDetailMovie";
+import style from "./DetailCinemaComplex.module.scss";
 export default function CinemaOfMovie({ detailMovie }) {
   // Danh sách Hệ Thống Rạp Chiếu
   const cinemaSystemList = detailMovie.heThongRapChieu;

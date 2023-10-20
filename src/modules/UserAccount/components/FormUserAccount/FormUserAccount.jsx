@@ -18,10 +18,10 @@ import {
   TextField,
 } from "@mui/material";
 import { getProfileUser, updateUser } from "../../../../apis/user";
-import style from "./FormUser.module.scss";
 import { useUserContext } from "../../../contexts/UserContext/UserContext";
 import Loading from "../../../../components/Loading/Loading";
 import Swal from "sweetalert2";
+import style from "./FormUser.module.scss";
 
 const signupSchema = object({
   taiKhoan: string().required("Tài khoản không được để trống"),
