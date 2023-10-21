@@ -6,7 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getBanner } from "../../../../apis/movies";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import style from "./Banner.module.scss";
+import bannerStyle from "./Banner.module.scss";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -62,7 +62,7 @@ export default function Banner() {
         return (
           <img
             key={index}
-            className={style.bannerImg}
+            className={bannerStyle.bannerImg}
             src={banner.hinhAnh}
             alt=""
           />
