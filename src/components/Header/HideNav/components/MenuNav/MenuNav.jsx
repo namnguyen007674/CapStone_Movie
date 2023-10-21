@@ -153,10 +153,13 @@ function MenuNav() {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={()=>{
-                    handleScroll(page)
-                    handleCloseNavMenu()
-                  }}>
+                  <MenuItem
+                    key={page}
+                    onClick={() => {
+                      handleScroll(page);
+                      handleCloseNavMenu();
+                    }}
+                  >
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
                 ))}
