@@ -10,7 +10,7 @@ export default function DetailSeat({ inforCienma }) {
 
   const queryClient = useQueryClient()
   // Lấy giá vé và danh sách ghế đang chọn
-  const { totalPrice, selectSeats } = useTicketContext();
+  const { totalPrice, selectSeats,handleBooking } = useTicketContext();
   // Tạo obj để lấy mã ghế và giá vé mỗi ghế
   const listTickets = selectSeats.map((seat) => ({
     maGhe: seat.maGhe,
@@ -22,6 +22,7 @@ export default function DetailSeat({ inforCienma }) {
       bookTickets({ maLichChieu: inforCienma.maLichChieu, danhSachVe:listTickets }),
       onSuccess:()=>{
         queryClient.invalidateQueries({queryKey:['tickets']})
+        handleBooking()
         Swal.fire("Đặt vé thành công!", "Chúc mừng bạn!", "success");
       }
   });

@@ -6,9 +6,16 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import AccordionDetailTime from "./components/AccordionDetailTime";
-import style from './AccordionDetailMovie.module.scss'
+import style from "./AccordionDetailMovie.module.scss";
+import { Container } from "@mui/material";
 const Accordion = styled((props) => (
-  <MuiAccordion disableGutters elevation={0} square {...props} sx={{ background: "transparent"  }} />
+  <MuiAccordion
+    disableGutters
+    elevation={0}
+    square
+    {...props}
+    sx={{ background: "transparent" }}
+  />
 ))(({ theme }) => ({
   border: `1px solid ${theme.palette.divider}`,
   "&:not(:last-child)": {
@@ -22,7 +29,12 @@ const Accordion = styled((props) => (
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
     expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
-    {...props} sx={{ background: "#1E1E1E",borderTopRightRadius:'5px',borderTopLeftRadius: "5px" }}
+    {...props}
+    sx={{
+      background: "#1E1E1E",
+      borderTopRightRadius: "5px",
+      borderTopLeftRadius: "5px",
+    }}
   />
 ))(({ theme }) => ({
   flexDirection: "row-reverse",
@@ -41,7 +53,7 @@ const AccordionSummary = styled((props) => (
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
   borderTop: "1px solid rgba(0, 0, 0, .125)",
-  background:'#121212'
+  background: "#121212",
 }));
 
 export default function AccordionDetailMovie({ cinemaSystemList }) {
@@ -59,52 +71,55 @@ export default function AccordionDetailMovie({ cinemaSystemList }) {
   };
 
   return (
-    <div className={style.AccordionDetailMovie}>
-      {cinemaSystemList.map((cinema) => (
-        // Danh sách rạp 
-        <Accordion
-        key={cinema.maHeThongRap}
-          expanded={expanded === `panel${cinema.maHeThongRap}`}
-          onChange={handleChange(`panel${cinema.maHeThongRap}`)}
-        >
-          {/* Logo Movie  */}
-          <AccordionSummary
-            aria-controls={`panel${cinema.maHeThongRap}`}
-            id={`panel${cinema.maHeThongRap}`}
+    <Container>
+      <div className={style.AccordionDetailMovie}>
+        {cinemaSystemList.map((cinema) => (
+          // Danh sách rạp
+          <Accordion
+            key={cinema.maHeThongRap}
+            expanded={expanded === `panel${cinema.maHeThongRap}`}
+            onChange={handleChange(`panel${cinema.maHeThongRap}`)}
           >
-            <img src={cinema.logo} width={50} height={50} alt="" />
-          </AccordionSummary>
-          <AccordionDetails>
-
-            
-            {cinema.cumRapChieu.map((detailCinema) => (
-              <Accordion
-              key={detailCinema.maCumRap}
-                expanded={nestedItem === `panela${detailCinema.maCumRap}`}
-                onChange={handleChangeNested(`panela${detailCinema.maCumRap}`)}
-              >
-                {/* Địa chỉ rạp  */}
-                <AccordionSummary
-                  aria-controls={`panela${detailCinema.maCumRap}`}
-                  id={`panela${detailCinema.maCumRap}`}
+            {/* Logo Movie  */}
+            <AccordionSummary
+              aria-controls={`panel${cinema.maHeThongRap}`}
+              id={`panel${cinema.maHeThongRap}`}
+            >
+              <img src={cinema.logo} width={50} height={50} alt="" />
+            </AccordionSummary>
+            <AccordionDetails>
+              {cinema.cumRapChieu.map((detailCinema) => (
+                <Accordion
+                  key={detailCinema.maCumRap}
+                  expanded={nestedItem === `panela${detailCinema.maCumRap}`}
+                  onChange={handleChangeNested(
+                    `panela${detailCinema.maCumRap}`
+                  )}
                 >
-                  <Typography sx={{ color: "#d4dd29", fontWeight: "500" }}>
-                    {detailCinema.tenCumRap}
-                  </Typography>
-                  <Typography sx={{color:'#fff'}}>{detailCinema.diaChi}</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-
-                  {/* Giờ Chiếu  */}
-                  <AccordionDetailTime
-                    detailShowTime={detailCinema.lichChieuPhim}
-                  />
-                </AccordionDetails>
-              </Accordion>
-            ))}
-          </AccordionDetails>
-        </Accordion>
-      ))}
-    </div>
+                  {/* Địa chỉ rạp  */}
+                  <AccordionSummary
+                    aria-controls={`panela${detailCinema.maCumRap}`}
+                    id={`panela${detailCinema.maCumRap}`}
+                  >
+                    <Typography sx={{ color: "#d4dd29", fontWeight: "500" }}>
+                      {detailCinema.tenCumRap}
+                    </Typography>
+                    <Typography sx={{ color: "#fff" }}>
+                      {detailCinema.diaChi}
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    {/* Giờ Chiếu  */}
+                    <AccordionDetailTime
+                      detailShowTime={detailCinema.lichChieuPhim}
+                    />
+                  </AccordionDetails>
+                </Accordion>
+              ))}
+            </AccordionDetails>
+          </Accordion>
+        ))}
+      </div>
+    </Container>
   );
 }

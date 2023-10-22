@@ -16,7 +16,7 @@ function SampleNextArrow(props) {
         display: "block",
         right: "-20px",
         color: "#666",
-        top:'35%'
+        top: "35%",
       }}
       onClick={onClick}
     />
@@ -32,7 +32,7 @@ function SamplePrevArrow(props) {
         display: "block",
         fontSize: "40px",
         left: "-42px",
-        top:'35%',
+        top: "35%",
         color: "#666",
         zIndex: "9",
       }}
@@ -52,42 +52,54 @@ export default function SlideMovie({ movieList }) {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
+        breakpoint: 1399.98,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          dots: false,
+          infinite:false
+        },
+      },
+      {
         breakpoint: 1204,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
-          infinite: true,
           dots: false,
-        }
+          infinite:false
+        },
       },
       {
         breakpoint: 981,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          initialSlide: 2
-        }
+          initialSlide: 1,
+          infinite:false
+        },
       },
       {
         breakpoint: 760,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          initialSlide: 2
-        }
+          initialSlide: 1,
+          infinite:false
+        },
       },
       {
         breakpoint: 524,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+          infinite:false
+        },
+      },
+    ],
   };
   return (
     <Slider {...settings}>
-      {movieList.map((item,index) => (
+      {movieList.map((item, index) => (
         <CardItem key={index} item={item} />
       ))}
     </Slider>

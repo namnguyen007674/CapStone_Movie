@@ -20,10 +20,14 @@ const TicketProvider = ({ children }) => {
       setTotalPrice(totalPrice - seat.giaVe);
     }
   };
+  const handleBooking = ()=>{
+    setselectSeats([])
+    setTotalPrice(0)
+  }
   // Giá vé
   return (
     <TicketsContext.Provider
-      value={{ selectSeats, totalPrice, handleSelected }}
+      value={{ selectSeats, totalPrice, handleSelected,handleBooking }}
     >
       {children}
     </TicketsContext.Provider>

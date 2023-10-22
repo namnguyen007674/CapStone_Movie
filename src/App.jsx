@@ -8,7 +8,7 @@ import SignUp from "./modules/Auth/components/pages/SignUp";
 import UserProvider from "./modules/contexts/UserContext/UserContext";
 import ProtectedRoute from "./modules/routers/ProtectedRoute/ProtectedRoute";
 import Tickets from "./modules/Tickets/Tickets";
-import TicketProvider from "./modules/contexts/TicketsContext/TicketsContext";
+import TicketProvider from "./modules/contexts/TicketsContext";
 import UserAccount from "./modules/UserAccount";
 import FormUserAccount from "./modules/UserAccount/components/FormUserAccount";
 import BookingHistory from "./modules/UserAccount/components/BookingHistory";
