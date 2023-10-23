@@ -14,3 +14,9 @@
     position: relative;
   }
 }
+
+.arrowItem {
+  @media (max-width:450px) {
+    top: 56% !important;
+  }
+}

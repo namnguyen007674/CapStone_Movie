@@ -2,17 +2,16 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useQuery } from "@tanstack/react-query";
-import { getBanner } from "../../../../apis/movies";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import cn from 'classnames/bind'
 import bannerStyle from "./Banner.module.scss";
-
+const bannerItemStyle = cn.bind(bannerStyle)
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <ArrowForwardIosIcon
-      className={className}
+      className={bannerItemStyle(className,"arrowItem")}
       style={{
         ...style,
         fontSize: "30px",
@@ -28,7 +27,7 @@ function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <ArrowBackIosIcon
-      className={className}
+      className={bannerItemStyle(className,"arrowItem")}
       style={{
         ...style,
         display: "block",
