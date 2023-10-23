@@ -9,13 +9,14 @@ import { useQuery } from "@tanstack/react-query";
 import { getCinemaInSystem } from "../../../../../../apis/cinema";
 import AccordionMovieList from "./components/AccordionMovieList";
 import style from "./AccordionCinemaSystem.module.scss";
+import { Container } from "@mui/material";
 const Accordion = styled((props) => (
   <MuiAccordion
     disableGutters
     elevation={0}
     square
     {...props}
-    sx={{ background: "transparent"  }}
+    sx={{ background: "transparent" }}
   />
 ))(({ theme }) => ({
   border: `1px solid ${theme.palette.divider}`,
@@ -31,7 +32,11 @@ const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
     expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
     {...props}
-    sx={{ background: "#1E1E1E",borderTopRightRadius:'5px',borderTopLeftRadius: "5px" }}
+    sx={{
+      background: "#1E1E1E",
+      borderTopRightRadius: "5px",
+      borderTopLeftRadius: "5px",
+    }}
   />
 ))(({ theme }) => ({
   flexDirection: "row-reverse",
@@ -75,52 +80,55 @@ export default function NestedAccordions({ cinemaSystem }) {
   };
 
   return (
-    <div className={style.AccordionCinemaSystem}>
-      {/* Danh sách hệ thống rạp  */}
-      {cinemaSystem.map((cinemas) => (
-        <Accordion
-          key={cinemas.maHeThongRap}
-          onClick={() => handleChangeCinemaId(cinemas.maHeThongRap)}
-          expanded={expanded === `panel${cinemas.maHeThongRap}`}
-          onChange={handleChange(`panel${cinemas.maHeThongRap}`)}
-        >
-          <AccordionSummary
-            aria-controls={`panel${cinemas.maHeThongRap}`}
-            id={`panel${cinemas.maHeThongRap}`}
+    <Container>
+      <div className={style.AccordionCinemaSystem}>
+        {/* Danh sách hệ thống rạp  */}
+        {cinemaSystem.map((cinemas) => (
+          <Accordion
+            key={cinemas.maHeThongRap}
+            onClick={() => handleChangeCinemaId(cinemas.maHeThongRap)}
+            expanded={expanded === `panel${cinemas.maHeThongRap}`}
+            onChange={handleChange(`panel${cinemas.maHeThongRap}`)}
           >
-            <img src={cinemas.logo} width={50} height={50} alt="" />
-          </AccordionSummary>
+            <AccordionSummary
+              aria-controls={`panel${cinemas.maHeThongRap}`}
+              id={`panel${cinemas.maHeThongRap}`}
+            >
+              <img src={cinemas.logo} width={50} height={50} alt="" />
+            </AccordionSummary>
 
-          {/* Danh sách rạp  */}
-          <AccordionDetails>
-            {cinemaList.map((cinema) => (
-              <Accordion
-                key={cinema.maCumRap}
-                expanded={nestedItem === `panela${cinema.maCumRap}`}
-                onChange={handleChangeNested(`panela${cinema.maCumRap}`)}
-              >
-                <AccordionSummary
-                  aria-controls={`panela${cinema.maCumRap}`}
-                  id={`panela${cinema.maCumRap}`}
+            {/* Danh sách rạp  */}
+            <AccordionDetails>
+              {cinemaList.map((cinema) => (
+                <Accordion
+                  key={cinema.maCumRap}
+                  expanded={nestedItem === `panela${cinema.maCumRap}`}
+                  onChange={handleChangeNested(`panela${cinema.maCumRap}`)}
                 >
-                  <Typography sx={{ color: "#d4dd29 ", fontWeight: "500" }}>
-                    {cinema.tenCumRap}
-                  </Typography>
-                  <Typography sx={{color:'#fff'}}>{cinema.diaChi}</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-
-                  {/* Danh sách phim  */}
-                  <AccordionMovieList
-                    cinemaComplexId={cinema.maCumRap}
-                    cinemaId={cinemaId}
-                  />
-                </AccordionDetails>
-              </Accordion>
-            ))}
-          </AccordionDetails>
-        </Accordion>
-      ))}
-    </div>
+                  <AccordionSummary
+                    aria-controls={`panela${cinema.maCumRap}`}
+                    id={`panela${cinema.maCumRap}`}
+                  >
+                    <Typography sx={{ color: "#d4dd29 ", fontWeight: "500" }}>
+                      {cinema.tenCumRap}
+                    </Typography>
+                    <Typography sx={{ color: "#fff" }}>
+                      {cinema.diaChi}
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    {/* Danh sách phim  */}
+                    <AccordionMovieList
+                      cinemaComplexId={cinema.maCumRap}
+                      cinemaId={cinemaId}
+                    />
+                  </AccordionDetails>
+                </Accordion>
+              ))}
+            </AccordionDetails>
+          </Accordion>
+        ))}
+      </div>
+    </Container>
   );
 }

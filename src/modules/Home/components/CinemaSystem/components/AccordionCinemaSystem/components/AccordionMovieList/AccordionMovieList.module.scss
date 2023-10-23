@@ -18,14 +18,23 @@
   .movielistItem {
     display: flex;
     padding: 20px;
+    @media (max-width:575.98px) {
+      padding: 20px 0 20px 10px;
+    }
     img {
       width: 100px;
       height: 126px;
     }
     .movielistTime {
       padding: 0 20px;
+      @media (max-width:575.98px) {
+        padding: 0 0 0 15px;
+      }
       .movielistName {
         font-size: 18px;
+      @media (max-width:575.98px) {
+        font-size: 15px;
+      }
         font-weight: 500;
         text-transform: uppercase;
         margin-bottom: 15px;

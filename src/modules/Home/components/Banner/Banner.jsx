@@ -15,7 +15,7 @@ function SampleNextArrow(props) {
       className={className}
       style={{
         ...style,
-        fontSize: "40px",
+        fontSize: "30px",
         display: "block",
         right: "20px",
         color: "#fff",
@@ -32,7 +32,7 @@ function SamplePrevArrow(props) {
       style={{
         ...style,
         display: "block",
-        fontSize: "40px",
+        fontSize: "30px",
         left: "20px",
         color: "#fff",
         zIndex: "9",
@@ -43,10 +43,24 @@ function SamplePrevArrow(props) {
 }
 
 export default function Banner() {
-  const { data: banners = [] } = useQuery({
-    queryKey: ["banner"],
-    queryFn: getBanner,
-  });
+
+  const banners = [
+    <img
+      src="https://s3img.vcdn.vn/123phim/2021/04/ban-tay-diet-quy-evil-expeller-16177781815781.png"
+      alt=""
+      className={bannerStyle.bannerImg}
+    />,
+    <img
+      src="https://s3img.vcdn.vn/123phim/2021/04/lat-mat-48h-16177782153424.png"
+      alt=""
+      className={bannerStyle.bannerImg}
+    />,
+    <img
+      src="https://s3img.vcdn.vn/123phim/2021/04/nguoi-nhan-ban-seobok-16177781610725.png"
+      alt=""
+      className={bannerStyle.bannerImg}
+    />,
+  ];
   const settings = {
     infinite: true,
     speed: 500,
@@ -54,18 +68,15 @@ export default function Banner() {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    autoplay: true,
+    // autoplay: true,
   };
   return (
     <Slider {...settings}>
       {banners.map((banner, index) => {
         return (
-          <img
-            key={index}
-            className={bannerStyle.bannerImg}
-            src={banner.hinhAnh}
-            alt=""
-          />
+          <div className={bannerStyle.bannerItem}>
+            {banner}
+          </div>
         );
       })}
     </Slider>

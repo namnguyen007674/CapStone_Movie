@@ -4,6 +4,9 @@
   @media (min-width: 576px) {
     display: block;
   }
+  @media (max-width: 400px) {
+    display: none;
+  }
 
   @media (min-width: 910px) {
     display: none;

@@ -41,7 +41,7 @@ export default function HideAppBar(props) {
           <MenuNav />
         </AppBar>
       </HideOnScroll>
-      <Toolbar />
+      {/* <Toolbar /> */}
     </React.Fragment>
   );
 }

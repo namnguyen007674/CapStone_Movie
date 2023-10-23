@@ -5,10 +5,13 @@
     h3 {
       margin-right: 10px;
       margin-bottom: 30px;
-      font-size: 26px;
+      font-size: 25px;
       color: #fbfbf9;
       font-weight: 400;
       text-transform: uppercase;
+      @media (max-width: 575.98px) {
+        font-size: 21px;
+      }
     }
     .homeActive {
       transition: all 0.5s;
@@ -20,10 +23,10 @@
   }
   // Ảnh và tiêu đề chi tiết phim
   .profileContent {
-    @media (max-width: 991.98px) { 
+    @media (max-width: 991.98px) {
       width: 80%;
-      margin:  0 auto;
-     }
+      margin: 0 auto;
+    }
 
     .profileImg {
       position: relative;
@@ -40,7 +43,7 @@
         justify-content: center;
         align-items: center;
         opacity: 0;
-        transition: all .5s;
+        transition: all 0.5s;
         &:hover {
           opacity: 1;
         }
@@ -52,7 +55,7 @@
       }
     }
 
-  // Mô tả chi tiết phim
+    // Mô tả chi tiết phim
     .profileItem {
       .profileName {
         margin-bottom: 15px;
@@ -61,7 +64,7 @@
           font-weight: 400;
           text-transform: uppercase;
           color: #fbfbf9;
-          @media (max-width: 991.98px) { 
+          @media (max-width: 991.98px) {
             font-size: 25px;
           }
         }

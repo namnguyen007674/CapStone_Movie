@@ -1,9 +1,16 @@
-.bannerImg {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  position: relative;
+.bannerItem {
+  padding-top: 69px;
+  @media (max-width:1199.98px) {
+    padding-top: 64px;
+  }
   @media (max-width:600px) {
-    display: none;
+    padding-top: 51px;
+  }
+  .bannerImg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    position: relative;
   }
 }
