@@ -68,7 +68,7 @@ export default function Banner() {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    // autoplay: true,
+    autoplay: true,
   };
   return (
     <Slider {...settings}>

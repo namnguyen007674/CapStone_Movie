@@ -1,5 +1,5 @@
 .bgUseraccount{
-  padding: 80px 0;
+  padding: 150px 0;
   background: url('https://tcdtist-tix-clone.vercel.app/static/media/backapp.b46ef3a1.jpg');
   background-size: cover;
     background-repeat: no-repeat;
@@ -11,8 +11,9 @@
     padding: 30px;
     border-radius: 6px;
     @media (max-width: 440px) {
-      width: 90%;
+      width: 100%;
     }
+    
     .useraccountTitle{
       display: flex;
       align-items: center;
