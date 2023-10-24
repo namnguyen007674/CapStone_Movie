@@ -165,28 +165,30 @@ function MenuNav() {
                 ))}
               </Menu>
             </Box>
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                mr: 2,
-                display: { xs: "flex", md: "none" },
-                flexGrow: 1,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
-              className={style.logoCenter}
-            >
-              <img
-                src="https://www.bhdstar.vn/wp-content/themes/bhd/assets/images/logo.png"
-                alt="img-logo"
-              />
-            </Typography>
+            <Link to="/">
+              <Typography
+                variant="h5"
+                noWrap
+                component="a"
+                href="#app-bar-with-responsive-menu"
+                sx={{
+                  mr: 2,
+                  display: { xs: "flex", md: "none" },
+                  flexGrow: 1,
+                  fontFamily: "monospace",
+                  fontWeight: 700,
+                  letterSpacing: ".3rem",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+                className={style.logoCenter}
+              >
+                <img
+                  src="https://www.bhdstar.vn/wp-content/themes/bhd/assets/images/logo.png"
+                  alt="img-logo"
+                />
+              </Typography>
+            </Link>
 
             {/* Social và User  */}
             <Grid item md={3}>
