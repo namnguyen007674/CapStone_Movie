@@ -6,8 +6,8 @@ export default function AccordionDetailTime({ detailShowTime }) {
   return (
     <div className={style.deatailListTicket}>
       {detailShowTime.map((showTime) => (
-        <div className={style.btnAccordionDetaiTime}>
-          <Link key={showTime.maRap} to={`/tickets/${showTime.maLichChieu}`}>
+        <div key={showTime.maRap} className={style.btnAccordionDetaiTime}>
+          <Link  to={`/tickets/${showTime.maLichChieu}`}>
             <ButtonTime movieTime={showTime} />
           </Link>
         </div>

@@ -58,8 +58,8 @@ export default function BookingHistory() {
                 </h3>
                 <h3 className={style.bookingTitle}>
                   Ghế:
-                  {item.danhSachGhe.map((item) => (
-                    <span key={item.maGhe} > {item.tenGhe},</span>
+                  {item.danhSachGhe.map((item,index) => (
+                    <span key={index} > {item.tenGhe},</span>
                   ))}
                 </h3>
               </Grid>

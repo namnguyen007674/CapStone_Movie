@@ -76,7 +76,7 @@ export default function Banner() {
     <Slider ref={sliderRef}  {...settings} >
       {banners.map((banner, index) => {
         return (
-          <div className={bannerStyle.bannerItem}>
+          <div key={index} className={bannerStyle.bannerItem}>
             {banner}
           </div>
         );
