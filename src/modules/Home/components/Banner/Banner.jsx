@@ -7,6 +7,8 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import cn from 'classnames/bind'
 import bannerStyle from "./Banner.module.scss";
 const bannerItemStyle = cn.bind(bannerStyle)
+
+
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -42,7 +44,7 @@ function SamplePrevArrow(props) {
 }
 
 export default function Banner() {
-
+  const sliderRef = React.useRef(null); // Tạo một tham chiếu cho Slider component
   const banners = [
     <img
       src="https://s3img.vcdn.vn/123phim/2021/04/ban-tay-diet-quy-evil-expeller-16177781815781.png"
@@ -62,15 +64,16 @@ export default function Banner() {
   ];
   const settings = {
     infinite: true,
-    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    autoplay: true,
+    autoplaySpeed:3000,
+    autoplay:true,
   };
   return (
-    <Slider {...settings}>
+    <>
+    <Slider ref={sliderRef}  {...settings} >
       {banners.map((banner, index) => {
         return (
           <div className={bannerStyle.bannerItem}>
@@ -79,5 +82,7 @@ export default function Banner() {
         );
       })}
     </Slider>
+    
+    </>
   );
 }

@@ -43,7 +43,7 @@ function SamplePrevArrow(props) {
 
 export default function SlideMovie({ movieList }) {
   const settings = {
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -75,7 +75,7 @@ export default function SlideMovie({ movieList }) {
           slidesToShow: 3,
           slidesToScroll: 1,
           initialSlide: 1,
-          infinite:false
+          infinite:false,
         },
       },
       {
@@ -92,7 +92,7 @@ export default function SlideMovie({ movieList }) {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite:false
+          infinite:true
         },
       },
     ],
