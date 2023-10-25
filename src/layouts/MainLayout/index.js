@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 export {default} from "./MainLayout"
 export const BackToTop = styled.div`
-  color: #3ae374;
+  color: #d4dd29;
   position: fixed;
   bottom: 20px;
   right: 20px;
