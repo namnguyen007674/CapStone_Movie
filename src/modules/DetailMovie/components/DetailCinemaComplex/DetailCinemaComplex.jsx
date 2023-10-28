@@ -1,4 +1,4 @@
-import {  Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import LocationCinemaDetail from "./components/LocationCinemaDetail";
 import AccordionDetailMovie from "./components/AccordionDetailMovie";
@@ -21,6 +21,11 @@ export default function CinemaOfMovie({ detailMovie }) {
   }, [cinemaSystemList]);
   return (
     <div className={style.spacingDetailCinema}>
+      <Typography
+        sx={{ color: "white", fontSize: "25px", marginBottom: "20px" }}
+      >
+        Danh sách rạp
+      </Typography>
       <Grid container className={style.bgDetailCinema}>
         <Grid item md={2}>
           <div className={style.detailCinema}>
@@ -44,7 +49,9 @@ export default function CinemaOfMovie({ detailMovie }) {
         </Grid>
       </Grid>
       {/* Các rạp chiếu  */}
-      {cinemaSystemList && <AccordionDetailMovie cinemaSystemList={cinemaSystemList} />}
+      {cinemaSystemList && (
+        <AccordionDetailMovie cinemaSystemList={cinemaSystemList} />
+      )}
     </div>
   );
 }

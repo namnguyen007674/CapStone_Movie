@@ -169,7 +169,7 @@ function MenuNav() {
               <Typography
                 variant="h5"
                 noWrap
-                component="a"
+                component="p"
                 href="#app-bar-with-responsive-menu"
                 sx={{
                   mr: 2,

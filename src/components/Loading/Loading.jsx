@@ -1,9 +1,20 @@
-import React from 'react'
-import style from './Loading.module.scss'
-export default function Loading() {
+import React from "react";
+import { Container, Typography } from "@mui/material";
+import { DivCustom } from "./index";
+
+export default function Loading(){
   return (
-    <div className={style.loading}>
-      <img src="/img/loadingsmall.gif" alt="" />
-    </div>
-  )
-}
+    <Container sx={{ height: "70vh" }}>
+      <DivCustom>
+        <img
+          src="/img/animation_lmnjb4q6_small.gif"
+          alt="Loading-animation"
+          width={300}
+        />
+        <Typography variant="h4">Vui Lòng Đợi...</Typography>
+      </DivCustom>
+    </Container>
+  );
+};
+
+

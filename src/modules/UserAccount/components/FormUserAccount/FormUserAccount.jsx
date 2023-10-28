@@ -150,9 +150,7 @@ export default function FormUserAccount() {
               render={({ field }) => (
                 <TextField
                   {...field}
-                  InputProps={{
-                    readOnly: true,
-                  }}
+                  disabled
                   fullWidth
                   error={!!errors.taiKhoan}
                   helperText={errors.taiKhoan?.message}
@@ -267,10 +265,7 @@ export default function FormUserAccount() {
                   fullWidth
                   select
                   label="MÃ LOẠI NGƯỜI DÙNG"
-                  SelectProps={{
-                    native: true,
-                    readOnly: true,
-                  }}
+                  disabled
                 >
                   {typeUser.map((option) => (
                     <option key={option.value} value={option.value}>

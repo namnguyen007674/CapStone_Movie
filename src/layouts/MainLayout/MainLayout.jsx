@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-// import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import HideAppBar from "../../components/Header/HideNav/HideNav";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import { BackToTop } from "./index";
 import { Outlet } from "react-router-dom";
+import Header from "../../components/Header/Header";
 export default function MainLayout() {
   const [showBackToTop, setShowBackToTop] = useState(false);
   useEffect(() => {
@@ -25,7 +24,7 @@ export default function MainLayout() {
   };
   return (
     <>
-      <HideAppBar />
+      <Header />
       <Outlet />
       <Footer />
       {showBackToTop && (

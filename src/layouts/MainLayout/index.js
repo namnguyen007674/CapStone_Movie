@@ -3,6 +3,7 @@ export {default} from "./MainLayout"
 export const BackToTop = styled.div`
   color: #d4dd29;
   position: fixed;
+  z-index: 9999;
   bottom: 20px;
   right: 20px;
   cursor: pointer;
