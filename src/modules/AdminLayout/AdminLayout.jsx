@@ -7,7 +7,7 @@ export default function AdminLayout() {
   return (
     <>
       <Header/>
-      <Grid container>
+      <Grid container sx={{paddingTop:'69px'}}>
         <Grid item md={2}>
           <AdminSideBar />
         </Grid>
