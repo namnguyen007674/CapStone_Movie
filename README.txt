@@ -2,7 +2,7 @@ Thông tin :
 Tên : Nguyễn Văn Nam
 Link website:https://cap-stone-movie.vercel.app/
 Link Github: https://github.com/namnguyen007674/CapStone_Movie.git
-Link Youtube: https://www.youtube.com/watch?v=qIRipvAsFsg
+Link Youtube: https://youtu.be/rXanitkIhBU
 
 
 Danh sách trang :

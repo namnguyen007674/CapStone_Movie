@@ -3,13 +3,16 @@ import { Grid, Rating } from "@mui/material";
 import dayjs from "dayjs";
 import ModalPlay from "./components/ModalPlay";
 import style from "./Profilemovie.module.scss";
+import { Link } from "react-router-dom";
 export default function ProfileMovie({ detailMovie }) {
   const time = dayjs(detailMovie.ngayKhoiChieu).format("DD/MM/YYYY");
 
   return (
     <div className={style.profile}>
       <div className={style.title}>
-        <h3 className={style.homeActive}>Trang chủ</h3>
+        <Link to="/">
+          <h3 className={style.homeActive}>Trang chủ</h3>
+        </Link>
         <h3>{`| ${detailMovie.tenPhim}`}</h3>
       </div>
       <div className={style.profileContent}>
